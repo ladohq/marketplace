@@ -6,7 +6,10 @@ the first line of their description, the kit's own skills, its flows and its MCP
 A kit that fails keeps its entry from the index.json there was (only its address when there
 was none); the build then exits 1, after writing the file.
 
-Usage: build_index.py [--check]   (--check: build and check, do not write index.json)
+Usage: build_index.py [--check]
+--check (for pull requests): build and print, do not write index.json; a kit that fails is
+printed as FAIL but does not fail the build (check_kits.py fails a pull request for the kits
+it adds or changes). Errors of the builder itself still exit non-zero.
 """
 
 import argparse
@@ -90,16 +93,19 @@ def render(index: dict) -> str:
     return json.dumps(index, indent=2, sort_keys=True, ensure_ascii=False) + "\n"
 
 
-def main() -> int:
+def main(argv: list[str] | None = None, entry=kit_entry) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     parser.add_argument("--check", action="store_true", help="do not write index.json")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     previous = json.loads(INDEX.read_text()).get("kits", {}) if INDEX.exists() else {}
-    index, failed = build(listed(LIST.read_text()), previous)
+    index, failed = build(listed(LIST.read_text()), previous, entry)
     text = render(index)
     if args.check:
         print(text, end="")
-    elif not INDEX.exists() or INDEX.read_text() != text:
+        if failed:
+            print(f"warning: kits that fail their check (not failing --check): {', '.join(failed)}")
+        return 0
+    if not INDEX.exists() or INDEX.read_text() != text:
         INDEX.write_text(text)
         print(f"wrote {INDEX}")
     else:
