@@ -51,3 +51,5 @@ CI checks each kit the pull request adds or changes: it takes the kit's latest r
 and runs `lado kits check --tag` on it, and checks that the name matches `kit.yaml`. A
 maintainer reviews the kit itself: a kit's prompts steer agents and its MCP servers run
 code, so we read what a kit does before we list it.
+
+<!-- CI smoke test; this PR will be closed without merging. -->
