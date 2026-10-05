@@ -1,0 +1,24 @@
+name: check kits
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: astral-sh/setup-uv@v6
+      - name: Install LADO
+        run: uv tool install "lado>=0.20"
+      - name: Check the kits this change adds or changes
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            base="${{ github.event.pull_request.base.sha }}"
+          else
+            base=""
+          fi
+          uv run --no-project --with pyyaml python scripts/check_kits.py $base

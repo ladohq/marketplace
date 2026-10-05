@@ -1,0 +1,4 @@
+# The official LADO marketplace: kit name -> git address of the kit's repository.
+# Each name is the `name` in that kit's kit.yaml. See README.md to propose a kit.
+kits:
+  lado-dev: https://github.com/ladohq/kit-lado-dev.git
