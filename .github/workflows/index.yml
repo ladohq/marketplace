@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - marketplace.yaml
+      - index.json
       - scripts/**
       - .github/workflows/index.yml
   schedule:
