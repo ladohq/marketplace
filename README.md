@@ -21,6 +21,16 @@ from git (`lado kits add <git-url>[@vX.Y.Z]`) or add your own marketplace
 |---|---|---|
 | `lado-dev` | [ladohq/kit-lado-dev](https://github.com/ladohq/kit-lado-dev) | Developing LADO itself: a supervisor, an architect, developers and reviewers, with the flows `feature` and `fix`. |
 
+## index.json
+
+`index.json` is what LADO's Kits page shows of each listed kit without cloning it: its
+address, latest release tag `vX.Y.Z` and that tag's commit, and, read from the kit at that
+tag, its description, the LADO version it needs, its roles (with the first line of each
+description), its own skills, its flows and its MCP servers (`"index": 1` is the format's
+version). CI rebuilds it with `scripts/build_index.py` on each push to `main`, daily and by
+hand, and commits it when it changed. Do not edit it by hand. A kit whose latest tag fails
+its check keeps its previous entry and fails the build.
+
 ## Propose a kit
 
 1. **One kit, one repository.** `kit.yaml` at the repository's root; several kits in one

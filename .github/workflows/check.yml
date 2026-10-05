@@ -22,3 +22,7 @@ jobs:
             base=""
           fi
           uv run --no-project --with pyyaml python scripts/check_kits.py $base
+      - name: Test the index builder
+        run: uv run --no-project --with pyyaml --with pytest pytest -q tests
+      - name: Build index.json without writing it
+        run: uv run --no-project --with pyyaml python scripts/build_index.py --check

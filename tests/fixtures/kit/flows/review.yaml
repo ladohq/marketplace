@@ -1,0 +1,10 @@
+name: review
+description: A one-step flow of the demo kit.
+start: work
+states:
+  work:
+    agent: worker
+    do: Do the task and report done.
+    outcomes: {done: done}
+  done:
+    end: true
