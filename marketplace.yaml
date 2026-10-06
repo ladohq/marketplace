@@ -2,3 +2,4 @@
 # Each name is the `name` in that kit's kit.yaml. See README.md to propose a kit.
 kits:
   lado-dev: https://github.com/ladohq/kit-lado-dev.git
+  kit-builder: https://github.com/ladohq/kit-builder.git
