@@ -1,6 +1,30 @@
 {
   "index": 1,
   "kits": {
+    "kit-builder": {
+      "address": "https://github.com/ladohq/kit-builder.git",
+      "agents": {
+        "author": "Writes the files of a LADO kit (kit.yaml, roles, flows, skills, README) from an approved blueprint, and fixes them from the critic's report.",
+        "critic": "Evaluates a LADO kit, read-only, with `lado kits check`, the complexity budget and a 12-criterion rubric, and writes one report with quoted findings for the human.",
+        "supervisor": "Leads a kit-builder session — interviews the human about their process, writes the kit's blueprint, hands the writing to an author and the checking to a critic, and releases the kit."
+      },
+      "commit": "e5d626a83bf5e704a7ab330543eb00f44c31d5ab",
+      "description": "Build and evaluate LADO kits. A supervisor interviews you about your process or starts from an archetype, writes a blueprint that says why each part of the kit exists, an author writes the kit and a critic checks it against a complexity budget and a rubric before release. The flow create takes a kit from interview to tag; evaluate reports on any kit.",
+      "flows": [
+        "create",
+        "evaluate"
+      ],
+      "lado": ">=0.23",
+      "latest": "v0.1.0",
+      "mcp": {},
+      "skills": [
+        "kit-archetypes",
+        "kit-budget",
+        "kit-interview",
+        "kit-rubric",
+        "lado-kit-format"
+      ]
+    },
     "lado-dev": {
       "address": "https://github.com/ladohq/kit-lado-dev.git",
       "agents": {
