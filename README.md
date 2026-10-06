@@ -20,6 +20,7 @@ from git (`lado kits add <git-url>[@vX.Y.Z]`) or add your own marketplace
 | Kit | Repository | What it is for |
 |---|---|---|
 | `lado-dev` | [ladohq/kit-lado-dev](https://github.com/ladohq/kit-lado-dev) | Developing LADO itself: a supervisor, an architect, developers and reviewers, with the flows `feature` and `fix`. |
+| `kit-builder` | [ladohq/kit-builder](https://github.com/ladohq/kit-builder) | Building and evaluating LADO kits: a supervisor that interviews you and writes the blueprint, an author and a critic, with the flows `create` and `evaluate`. |
 
 ## index.json
 
