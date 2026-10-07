@@ -8,7 +8,7 @@
         "critic": "Evaluates a LADO kit, read-only, with `lado kits check`, the complexity budget and a 12-criterion rubric, and writes one report with quoted findings for the human.",
         "supervisor": "Leads a kit-builder session — interviews the human about their process, writes the kit's blueprint, hands the writing to an author and the checking to a critic, and releases the kit."
       },
-      "commit": "05ca1c322535a23089adc25f157b5f5f99defa5e",
+      "commit": "c0087539bd696a95e1e7645ada248117531787e0",
       "description": "Build and evaluate LADO kits. A supervisor interviews you about your process or starts from an archetype, writes a blueprint that says why each part of the kit exists, an author writes the kit and a critic checks it against a complexity budget and a rubric before release. The flow create takes a kit from interview to tag, improve takes an existing kit from the critic's report to a new tag, and evaluate reports on any kit.",
       "flows": [
         "create",
@@ -16,7 +16,7 @@
         "improve"
       ],
       "lado": ">=0.23",
-      "latest": "v0.2.0",
+      "latest": "v0.4.0",
       "mcp": {},
       "skills": [
         "kit-archetypes",
@@ -34,14 +34,14 @@
         "reviewer": "Reviews one LADO branch against its acceptance criteria, AGENTS.md and the long-term architecture, read-only, and gives a merge verdict.",
         "supervisor": "Designs changes to LADO with the human for the long term, delegates them to an architect, developers and reviewers, and merges what passes review."
       },
-      "commit": "58ea55ff0ddefaa2b311ccaadd6c0e9fb1ccfccb",
+      "commit": "b29986c4438ccc46c5da9ad2100b2546b2983b0f",
       "description": "Develop LADO itself for the long term: a supervisor that designs with the human and delegates, an architect that reviews each design against the roadmap, developers that work test-first, and reviewers that check each branch before it is merged; what anyone finds outside the task goes to BACKLOG.md. The flows feature and fix take each task from design to merge.",
       "flows": [
         "feature",
         "fix"
       ],
       "lado": ">=0.19",
-      "latest": "v0.9.4",
+      "latest": "v0.10.3",
       "mcp": {},
       "skills": [
         "lado-checks"
