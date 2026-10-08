@@ -8,15 +8,15 @@
         "critic": "Evaluates a LADO kit, read-only, with `lado kits check`, the complexity budget and a 12-criterion rubric, and writes one report with quoted findings for the human.",
         "supervisor": "Leads a kit-builder session — interviews the human about their process, writes the kit's blueprint, hands the writing to an author and the checking to a critic, and releases the kit."
       },
-      "commit": "c0087539bd696a95e1e7645ada248117531787e0",
-      "description": "Build and evaluate LADO kits. A supervisor interviews you about your process or starts from an archetype, writes a blueprint that says why each part of the kit exists, an author writes the kit and a critic checks it against a complexity budget and a rubric before release. The flow create takes a kit from interview to tag, improve takes an existing kit from the critic's report to a new tag, and evaluate reports on any kit.",
+      "commit": "2b1dbcf01f5986bceb1bc5c818975dd6c26178ae",
+      "description": "Build and evaluate LADO kits. A supervisor interviews you about your process or starts from an archetype, writes a blueprint that says why each part of the kit exists, an author writes the kit and a critic checks it against a complexity budget and a rubric before release. The flow create takes a kit from interview to tag, improve takes an existing kit from the critic's report to a new tag, and evaluate reports on any kit. The blueprint, the plan and the reports are artifacts you read in LADO's UI.",
       "flows": [
         "create",
         "evaluate",
         "improve"
       ],
-      "lado": ">=0.23",
-      "latest": "v0.4.0",
+      "lado": ">=0.27",
+      "latest": "v0.5.0",
       "mcp": {},
       "skills": [
         "kit-archetypes",
@@ -30,21 +30,35 @@
       "address": "https://github.com/ladohq/kit-lado-dev.git",
       "agents": {
         "architect": "Reviews a LADO design (not code) against ROADMAP, AGENTS.md and the current architecture, read-only, before it is implemented.",
+        "checker": "Runs LADO's full check, and the live tests a change needs, on a reviewed branch merged with main, before the human approves the merge; changes no code.",
         "developer": "Implements one LADO task test-first on its own branch and reports with check output and a commit.",
         "reviewer": "Reviews one LADO branch against its acceptance criteria, AGENTS.md and the long-term architecture, read-only, and gives a merge verdict.",
-        "supervisor": "Designs changes to LADO with the human for the long term, delegates them to an architect, developers and reviewers, and merges what passes review."
+        "supervisor": "Designs changes to LADO with the human for the long term, delegates them to an architect, developers, reviewers and a checker, and merges what passes review and the full check."
       },
-      "commit": "b29986c4438ccc46c5da9ad2100b2546b2983b0f",
-      "description": "Develop LADO itself for the long term: a supervisor that designs with the human and delegates, an architect that reviews each design against the roadmap, developers that work test-first, and reviewers that check each branch before it is merged; what anyone finds outside the task goes to BACKLOG.md. The flows feature and fix take each task from design to merge.",
+      "commit": "38324bf75b5272d7ff0df5e5ff0cceb69a503dc5",
+      "description": "Develop LADO itself for the long term: a supervisor that designs with the human and delegates, an architect that reviews each design against the roadmap, developers that work test-first, reviewers that check each branch, and a checker that runs the full check before the human approves the merge; what anyone finds outside the task goes to BACKLOG.md. The flows feature and fix take each task from design to merge; each step's result (design, review, report, check results) is a run artifact the human reads in LADO's UI.",
       "flows": [
         "feature",
         "fix"
       ],
-      "lado": ">=0.19",
-      "latest": "v0.10.3",
+      "lado": ">=0.27",
+      "latest": "v0.12.0",
       "mcp": {},
       "skills": [
         "lado-checks"
+      ]
+    },
+    "tracker-jira-server": {
+      "address": "https://github.com/ladohq/kit-tracker-jira-server.git",
+      "agents": {},
+      "commit": "48f53a4f01de7e46a6f5b244c1d42ddb9b6183bc",
+      "description": "The tracker skill for Jira Server / Data Center 8.4 or newer: find, read, create, move, comment on and link tasks through REST API v2, with a standard-library Python script. No agents: add it to a session next to a process kit.",
+      "flows": [],
+      "lado": ">=0.27",
+      "latest": "v1.0.0",
+      "mcp": {},
+      "skills": [
+        "tracker"
       ]
     }
   }
