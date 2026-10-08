@@ -21,6 +21,7 @@ from git (`lado kits add <git-url>[@vX.Y.Z]`) or add your own marketplace
 |---|---|---|
 | `lado-dev` | [ladohq/kit-lado-dev](https://github.com/ladohq/kit-lado-dev) | Developing LADO itself: a supervisor, an architect, developers and reviewers, with the flows `feature` and `fix`. |
 | `kit-builder` | [ladohq/kit-builder](https://github.com/ladohq/kit-builder) | Building and evaluating LADO kits: a supervisor that interviews you and writes the blueprint, an author and a critic, with the flows `create` and `evaluate`. |
+| `tracker-jira-server` | [ladohq/kit-tracker-jira-server](https://github.com/ladohq/kit-tracker-jira-server) | The `tracker` skill for Jira Server / Data Center 8.4+: process kits' roles find, read, create, move, comment on and link tasks; no agents, no MCP. |
 
 ## index.json
 
