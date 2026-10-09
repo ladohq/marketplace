@@ -75,11 +75,11 @@
     "tracker-jira-server": {
       "address": "https://github.com/ladohq/kit-tracker-jira-server.git",
       "agents": {},
-      "commit": "48f53a4f01de7e46a6f5b244c1d42ddb9b6183bc",
+      "commit": "802c0996bdfbdf2ff44d60c7a9a8ddbd8c710183",
       "description": "The tracker skill for Jira Server / Data Center 8.4 or newer: find, read, create, move, comment on and link tasks through REST API v2, with a standard-library Python script. No agents: add it to a session next to a process kit.",
       "flows": [],
       "lado": ">=0.27",
-      "latest": "v1.0.0",
+      "latest": "v1.0.2",
       "mcp": {},
       "skills": [
         "tracker"
