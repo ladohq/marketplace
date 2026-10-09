@@ -4,3 +4,4 @@ kits:
   lado-dev: https://github.com/ladohq/kit-lado-dev.git
   kit-builder: https://github.com/ladohq/kit-builder.git
   tracker-jira-server: https://github.com/ladohq/kit-tracker-jira-server.git
+  sdlc: https://github.com/ladohq/kit-sdlc.git
