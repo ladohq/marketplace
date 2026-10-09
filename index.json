@@ -8,7 +8,7 @@
         "critic": "Evaluates a LADO kit, read-only, with `lado kits check`, the complexity budget and a 12-criterion rubric, and writes one report with quoted findings for the human.",
         "supervisor": "Leads a kit-builder session — interviews the human about their process, writes the kit's blueprint, hands the writing to an author and the checking to a critic, and releases the kit."
       },
-      "commit": "2b1dbcf01f5986bceb1bc5c818975dd6c26178ae",
+      "commit": "b5bac1f916792087c833d35fa947aea25414227a",
       "description": "Build and evaluate LADO kits. A supervisor interviews you about your process or starts from an archetype, writes a blueprint that says why each part of the kit exists, an author writes the kit and a critic checks it against a complexity budget and a rubric before release. The flow create takes a kit from interview to tag, improve takes an existing kit from the critic's report to a new tag, and evaluate reports on any kit. The blueprint, the plan and the reports are artifacts you read in LADO's UI.",
       "flows": [
         "create",
@@ -16,7 +16,7 @@
         "improve"
       ],
       "lado": ">=0.27",
-      "latest": "v0.5.0",
+      "latest": "v0.6.0",
       "mcp": {},
       "skills": [
         "kit-archetypes",
@@ -46,6 +46,30 @@
       "mcp": {},
       "skills": [
         "lado-checks"
+      ]
+    },
+    "sdlc": {
+      "address": "https://github.com/ladohq/kit-sdlc.git",
+      "agents": {
+        "analyst": "Takes a tracker task and designs its change with the human as an openspec change (and, at full scale, a design doc and a plan); writes documents, never code.",
+        "developer": "Builds the approved change test-first, keeps its pull request and its link in the tracker up to date, and fixes what the review, a rejected merge or a conflict names.",
+        "integrator": "Archives the converged change inside the pull request, then, on the human's approval, merges it with a merge commit and does the tracker part of the merge routine.",
+        "reviewer": "Reviews the pull request read-only in rounds of review-loop, local passes and external rounds, keeps the findings ledger and decides when the review has converged.",
+        "supervisor": "Leads the session: starts one run of the flow task per tracker task the human names, answers blocked workers, brings the human to the gates and cleans up after a merge."
+      },
+      "commit": "fe4bc583528e111552ef4937abd0c499598dd733",
+      "description": "Day-to-day development of a project whose tasks live in a task tracker, one task per run: an analyst takes the task and designs the change with you as an openspec change, a developer builds it test-first and opens the pull request, a reviewer drives it through local and external review rounds, an integrator archives the change inside the pull request and merges it with the tracker routine. You approve the design and the merge. Start it with a tracker kit that gives the roles the skill tracker.",
+      "flows": [
+        "task"
+      ],
+      "lado": ">=0.29",
+      "latest": "v0.2.0",
+      "mcp": {},
+      "skills": [
+        "engineering-rules",
+        "openspec-changes",
+        "review-loop",
+        "sdlc-settings"
       ]
     },
     "tracker-jira-server": {
