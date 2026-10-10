@@ -8,15 +8,15 @@
         "critic": "Evaluates a LADO kit, read-only, with `lado kits check`, the complexity budget and a 12-criterion rubric, and writes one report with quoted findings for the human.",
         "supervisor": "Leads a kit-builder session — interviews the human about their process, writes the kit's blueprint, hands the writing to an author and the checking to a critic, and releases the kit."
       },
-      "commit": "b5bac1f916792087c833d35fa947aea25414227a",
+      "commit": "60a29b267902cfca84e5cda549733d4dc86eaaa1",
       "description": "Build and evaluate LADO kits. A supervisor interviews you about your process or starts from an archetype, writes a blueprint that says why each part of the kit exists, an author writes the kit and a critic checks it against a complexity budget and a rubric before release. The flow create takes a kit from interview to tag, improve takes an existing kit from the critic's report to a new tag, and evaluate reports on any kit. The blueprint, the plan and the reports are artifacts you read in LADO's UI.",
       "flows": [
         "create",
         "evaluate",
         "improve"
       ],
-      "lado": ">=0.27",
-      "latest": "v0.6.0",
+      "lado": ">=0.30",
+      "latest": "v0.7.0",
       "mcp": {},
       "skills": [
         "kit-archetypes",
@@ -57,13 +57,13 @@
         "reviewer": "Reviews the pull request read-only in rounds of review-loop, local passes and external rounds, keeps the findings ledger and decides when the review has converged.",
         "supervisor": "Leads the session: starts one run of the flow task per tracker task the human names, answers blocked workers, brings the human to the gates and cleans up after a merge."
       },
-      "commit": "fe4bc583528e111552ef4937abd0c499598dd733",
+      "commit": "c7a13401d8e7f35a9fa46e438151d12007e7ad92",
       "description": "Day-to-day development of a project whose tasks live in a task tracker, one task per run: an analyst takes the task and designs the change with you as an openspec change, a developer builds it test-first and opens the pull request, a reviewer drives it through local and external review rounds, an integrator archives the change inside the pull request and merges it with the tracker routine. You approve the design and the merge. Start it with a tracker kit that gives the roles the skill tracker.",
       "flows": [
         "task"
       ],
-      "lado": ">=0.29",
-      "latest": "v0.2.0",
+      "lado": ">=0.30",
+      "latest": "v0.3.0",
       "mcp": {},
       "skills": [
         "engineering-rules",
@@ -75,11 +75,11 @@
     "tracker-jira-server": {
       "address": "https://github.com/ladohq/kit-tracker-jira-server.git",
       "agents": {},
-      "commit": "802c0996bdfbdf2ff44d60c7a9a8ddbd8c710183",
-      "description": "The tracker skill for Jira Server / Data Center 8.4 or newer: find, read, create, move, comment on and link tasks through REST API v2, with a standard-library Python script. No agents: add it to a session next to a process kit.",
+      "commit": "6efeefc7abc0b71631ac47c1925a7180b7f7fade",
+      "description": "The tracker skill for Jira Server / Data Center 8.4 or newer: find, read, create, move, comment on, assign and label tasks, link a branch or commit to tasks, and say which account it works as, through REST API v2, with a standard-library Python script run by uv. No agents: add it to a session next to a process kit.",
       "flows": [],
-      "lado": ">=0.27",
-      "latest": "v1.0.2",
+      "lado": ">=0.30",
+      "latest": "v1.2.0",
       "mcp": {},
       "skills": [
         "tracker"
