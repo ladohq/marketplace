@@ -23,6 +23,7 @@ from git (`lado kits add <git-url>[@vX.Y.Z]`) or add your own marketplace
 | `kit-builder` | [ladohq/kit-builder](https://github.com/ladohq/kit-builder) | Building and evaluating LADO kits: a supervisor that interviews you and writes the blueprint, an author and a critic, with the flows `create` and `evaluate`. |
 | `tracker-jira-server` | [ladohq/kit-tracker-jira-server](https://github.com/ladohq/kit-tracker-jira-server) | The `tracker` skill for Jira Server / Data Center 8.4+: process kits' roles find, read, create, move, comment on and link tasks; no agents, no MCP. |
 | `sdlc` | [ladohq/kit-sdlc](https://github.com/ladohq/kit-sdlc) | Day-to-day development, one tracker task per run: an analyst designs the change with you as an openspec change, a developer builds it test-first, a reviewer drives local and external review rounds, an integrator archives and merges; you approve the design and the merge. Needs a tracker kit such as `tracker-jira-server`. |
+| `tracker-yougile` | [ladohq/kit-tracker-yougile](https://github.com/ladohq/kit-tracker-yougile) | The `tracker` skill for Yougile (cloud, REST API v2): process kits' roles find, read, create, move, comment on, assign, label and link tasks; no agents, no MCP. |
 
 ## index.json
 
