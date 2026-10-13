@@ -88,11 +88,11 @@
     "tracker-yougile": {
       "address": "https://github.com/ladohq/kit-tracker-yougile.git",
       "agents": {},
-      "commit": "4b24b3cc7c0173b48f94855a74b3d4c4b0e6f128",
+      "commit": "8501dc37190427684c4d77bcea129662e0721132",
       "description": "The tracker skill for Yougile (REST API v2; tried on the cloud, self-hosted untried): search, get, create, edit (title, description), transition, comment on, assign and label tasks, link a URL or another task to a task, and whoami, with a standard-library Python script run by uv. No agents: add it to a session next to a process kit.",
       "flows": [],
       "lado": ">=0.30",
-      "latest": "v0.3.0",
+      "latest": "v0.3.1",
       "mcp": {},
       "skills": [
         "tracker"
