@@ -75,11 +75,11 @@
     "tracker-jira-server": {
       "address": "https://github.com/ladohq/kit-tracker-jira-server.git",
       "agents": {},
-      "commit": "f460312b0b787e7046a10316a6ef5dd6fa7db7b6",
-      "description": "The tracker skill for Jira Server / Data Center 8.4 or newer: find, read, create, edit (summary and description), move, comment on, assign and label tasks, link a branch, commit or another task to tasks, and say which account it works as, through REST API v2, with a standard-library Python script run by uv. No agents: add it to a session next to a process kit.",
+      "commit": "3372ba20e73f03bd76dfa035c02760b44676cbde",
+      "description": "The tracker skill for Jira Server / Data Center 8.4 or newer: find, read, create, edit (summary and description), move, comment on, assign and label tasks, link a branch, commit or another task to tasks, attach files to tasks and download them, and say which account it works as, through REST API v2, with a standard-library Python script run by uv. No agents: add it to a session next to a process kit.",
       "flows": [],
       "lado": ">=0.30",
-      "latest": "v1.4.0",
+      "latest": "v1.5.0",
       "mcp": {},
       "skills": [
         "tracker"
@@ -88,11 +88,11 @@
     "tracker-yougile": {
       "address": "https://github.com/ladohq/kit-tracker-yougile.git",
       "agents": {},
-      "commit": "8501dc37190427684c4d77bcea129662e0721132",
-      "description": "The tracker skill for Yougile (REST API v2; tried on the cloud, self-hosted untried): search, get, create, edit (title, description), transition, comment on, assign and label tasks, link a URL or another task to a task, and whoami, with a standard-library Python script run by uv. No agents: add it to a session next to a process kit.",
+      "commit": "a49364de2bd8d35d7dee3e062a73bee1ca7954e8",
+      "description": "The tracker skill for Yougile (REST API v2; tried on the cloud, self-hosted untried): search, get, create, edit (title, description), transition, comment on, assign and label tasks, link a URL or another task to a task, attach files to a task and download its files, and whoami, with a standard-library Python script run by uv. No agents: add it to a session next to a process kit.",
       "flows": [],
       "lado": ">=0.30",
-      "latest": "v0.3.1",
+      "latest": "v0.4.0",
       "mcp": {},
       "skills": [
         "tracker"
