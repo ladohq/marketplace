@@ -53,17 +53,17 @@
       "agents": {
         "analyst": "Takes a tracker task and designs its change with the human as an openspec change (and, at full scale, a design doc and a plan); writes documents, never code.",
         "developer": "Builds the approved change test-first, keeps its pull request and its link in the tracker up to date, and fixes what the review, a rejected merge or a conflict names.",
-        "integrator": "On the human's approval, archives the converged change inside the pull request, merges it with a merge commit and does the tracker part of the merge routine.",
+        "integrator": "On the human's approval, archives the converged change inside the pull request, merges it with a merge commit and does what the project's After the merge section says in the tracker.",
         "reviewer": "Reviews the pull request read-only in rounds of review-loop, local passes and external rounds, keeps the findings ledger and decides when the review has converged.",
         "supervisor": "Leads the session: starts one run of the flow task per tracker task the human names, answers blocked workers, brings the human to the gates and cleans up after a merge."
       },
-      "commit": "a3649d20e34c5141115733a3e839c0177d3e6bcc",
+      "commit": "f9b63c3a654ce7dd9f1550dd26b67a9660033fb7",
       "description": "Day-to-day development of a project whose tasks live in a task tracker, one task per run: an analyst takes the task and designs the change with you as an openspec change, a developer builds it test-first and opens the pull request, a reviewer drives it through local and external review rounds, and on your approval an integrator archives the change inside the pull request and merges it with the tracker routine. You approve the design and the merge. Start it with a tracker kit that gives the roles the skill tracker.",
       "flows": [
         "task"
       ],
       "lado": ">=0.34",
-      "latest": "v0.5.0",
+      "latest": "v0.6.0",
       "mcp": {},
       "skills": [
         "engineering-rules",
