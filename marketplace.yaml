@@ -6,3 +6,4 @@ kits:
   tracker-jira-server: https://github.com/ladohq/kit-tracker-jira-server.git
   sdlc: https://github.com/ladohq/kit-sdlc.git
   tracker-yougile: https://github.com/ladohq/kit-tracker-yougile.git
+  epic: https://github.com/ladohq/kit-epic.git
