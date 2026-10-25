@@ -1,6 +1,27 @@
 {
   "index": 1,
   "kits": {
+    "epic": {
+      "address": "https://github.com/ladohq/kit-epic.git",
+      "agents": {
+        "delivery": "Checks an epic's result for release readiness with a fresh context — results of all steps, an upgrade from the previous version with old files, open checks — and writes the final report.",
+        "plan-critic": "Reviews an epic's brief, plan and first step's draft with fresh eyes for gaps, contradictions and steps that cannot be checked; changes no file.",
+        "supervisor": "Leads each epic of the session through the flow epic: clarifies the statement, plans, runs each step as a run of sdlc's task, recommends at every gate, reviews the step and revises the plan."
+      },
+      "commit": "92c7197022b874e49b7e19fb06e9436e2b4bdf75",
+      "description": "Leads a feature (an epic) from a free-form statement to a delivered result: checks the statement is ready and asks you what is missing, plans small verifiable steps, runs each step as a run of the flow `task` of the kit `sdlc` in the same session, reviews every step's results and revises the plan, and ends with a release-readiness check and a report of the decisions that matter. You approve the plan, each next step whose review changed the plan, and the delivery, and keep every gate of `sdlc`; a short `status` shows where the epic stands. Writes no product code. Start it with the kit `sdlc` and a tracker kit.",
+      "flows": [
+        "epic"
+      ],
+      "lado": ">=0.34",
+      "latest": "v0.2.0",
+      "mcp": {},
+      "skills": [
+        "epic-files",
+        "step-brief",
+        "step-review"
+      ]
+    },
     "kit-builder": {
       "address": "https://github.com/ladohq/kit-builder.git",
       "agents": {
@@ -57,13 +78,13 @@
         "reviewer": "Reviews the pull request read-only in rounds of review-loop, local passes and external rounds, keeps the findings ledger and decides when the review has converged.",
         "supervisor": "Leads the session: starts one run of the flow task per tracker task the human names, answers blocked workers, brings the human to the gates and cleans up after a merge."
       },
-      "commit": "f9b63c3a654ce7dd9f1550dd26b67a9660033fb7",
+      "commit": "9a536a9bd4b17c0f33e18900c04011356d85d173",
       "description": "Day-to-day development of a project whose tasks live in a task tracker, one task per run: an analyst takes the task and designs the change with you as an openspec change, a developer builds it test-first and opens the pull request, a reviewer drives it through local and external review rounds, and on your approval an integrator archives the change inside the pull request and merges it with the tracker routine. You approve the design and the merge. Start it with a tracker kit that gives the roles the skill tracker.",
       "flows": [
         "task"
       ],
-      "lado": ">=0.34",
-      "latest": "v0.6.0",
+      "lado": ">=0.42",
+      "latest": "v0.7.0",
       "mcp": {},
       "skills": [
         "engineering-rules",
